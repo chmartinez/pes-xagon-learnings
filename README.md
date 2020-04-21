@@ -30,8 +30,16 @@ To have a web page that draws an animated hexagon like the one from PES.
 * The max value for any of the vertex weights is 100
 * The higher the weight, the more far away from the center the vertex will be.
 
+
+### Tech chosen
+* Rendering: SVG
+
+### What I'm doing right now
+* Reading [this](https://css-tricks.com/when-to-use-svg-vs-when-to-use-canvas/) so I can understand when to use SVG and when Canvas
+* Reading [this](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg193979%28v%3dvs.85%29) so that I can learn how to use SVG.
+
 ## TODO's
 - [x] Analyze the math around the hexagons
 - [x] Define the rules around the pes-xagon
-
-- [ ] Study which technology will fit better
+- [x] Study which technology will fit better
+- [ ] Reach the 1st goal: _Have an hexagon drawn in a web page_
