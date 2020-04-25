@@ -68,21 +68,31 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 ### Tech chosen
 * Rendering: SVG
 
-### What I'm doing right now
-* Reading [this](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg193979%28v%3dvs.85%29) so that I can learn how to use SVG.
-* Reading https://css-tricks.com/scale-svg/ to understand why does the test img gets a default size of 300x150 px and the inline svg gets a 100% width (and height) 
-* Reading https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox so I can learn about viewBox property
-
-
 ## TODO's
 - [x] Analyze the math around the hexagons
 - [x] Define the rules around the pes-xagon
 - [x] Study which technology will fit better
 - [x] Reach the 1st goal: _Have an hexagon drawn in a web page_
 - [x]  Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
+- [x] Reach the 3rd goal: _Add a way to start the animation when selecting a vertex (or clicking in a button or smth)_
+- [x] Reach the 4th goal: _Let the figure to animate more than one vertex at a time_
+- [ ] Reach the 5th goal: _Add a way to configure "weights" to each vertex and make the animation depend on that "weight"_
 
-## SUB-TODO's
+
+### SUB-TODO's
 - [x] Understand how SVG polygon works (specially the points)
-- [ ] See how to animate one of the points. If it's too hard, then try a different approach.
+- [x] See how to animate one of the points. If it's too hard, then try a different approach.
+- [ ] Add some love to the structure (CSS for section, article, divs?)
+- [ ] Start thinking in JS (functions, constants, ways of setting points, calculating vertex positions, etc.)
+
+### Optionals
 - [ ] Check what's the difference (and pros/cons) between `polygon` and `path`
 
+## Resources
+* [How to use SVG](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg193979%28v%3dvs.85%29)
+* [SVG viewBox explanation](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)
+* [How to scale SVG & use viewBox like a wizard](https://css-tricks.com/scale-svg/)
+* [How to use `animate` to animate SVG elements](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate)
+* [How SVG morphing works (with SMIL)](https://css-tricks.com/svg-shape-morphing-works/)
+* [How to animate svg path with CSS](https://css-tricks.com/animate-svg-path-changes-in-css/)
+* [Animate polygons with JS](https://www.creativebloq.com/how-to/create-and-animate-svg-polygons)
