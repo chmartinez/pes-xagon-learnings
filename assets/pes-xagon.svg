@@ -9,11 +9,12 @@
     <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="transparent" stroke="coral" stroke-width="1.5">
         <animate 
             attributeName="points"
+            begin="2s"
+            to="0 -90, 64.95 -37.5, 43.30 25, 0 50, -43.30 25, -43.30 -25"
             fill="freeze"
             dur="3s"
             restart="always"
             repeatCount="10"
-            to="0 -90, 64.95 -37.5, 43.30 25, 0 50, -43.30 25, -43.30 -25"
         />
     </polygon>
     <!-- Max-size polygon -->

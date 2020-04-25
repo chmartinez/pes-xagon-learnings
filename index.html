@@ -9,19 +9,40 @@
 
 <body>
     <main>
-        <section>
-            <h1>The PES-xagon</h1>
-            <div>
-                <p>The svg goes here!</p>
-                <div id="container">
-                    <img id="pes-xagon" alt="the PES-xagon" src="assets/pes-xagon.svg" />
-                </div>
+        <h1>The PES-xagon</h1>
+        <section id="1st-test">
+            <h2>The first attempt: an animated pes-xagon</h2>
+            <img src="assets/pes-xagon.svg" width="300" height="300" />
+        </section>
+        <section id="2nd-test">
+            <h2>2nd attempt: on click, run an animation</h2>
+            <svg id="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+                <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="black" stroke="coral"
+                    stroke-width="1.5">
+                    <animate attributeName="points" begin="go.click" dur="1s" fill="freeze"
+                        from="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25"
+                        to="0 -90, 64.95 -37.5, 43.30 25, 0 50, -43.30 25, -43.30 -25" />
+                </polygon>
+                <circle id="go" r="4" cx="43.30" cy="25" fill="blue" />
+            </svg>
+            <div class="explanation">
+                <p>The good thing of `animate` is that the animation can affect all the points at the same time!</p>
+                <p>The only way to trigger the animation without JS or CSS is by putting a element within the svg and
+                    using the `begin` prop</p>
+                <p>
+                    The other downside is that it only allows id's, so having multiple triggers could be a problem
+                </p>
             </div>
         </section>
     </main>
     <style>
-        #container {
+        main {
             background-color: gray;
+        }
+
+        section {
+            margin-bottom: 1rem;
+            border-bottom: solid 1px white;
         }
 
         #test {
@@ -29,9 +50,13 @@
         }
 
         #pes-xagon {
-            width: 400px;
-            height: 400px;
+            width: 30rem;
+            height: 30rem;
             background-color: black;
+        }
+
+        .explanation {
+            padding: 1rem;
         }
     </style>
 </body>
