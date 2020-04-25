@@ -9,6 +9,10 @@ Remember this?
 Well, the idea is to have the hexagon from PES, but from scratch.
 
 
+## Current result
+![](assets/pes-xagon.svg?raw=true)
+
+
 ## Goal
 To have a web page that draws an animated hexagon like the one from PES.
 
@@ -30,9 +34,29 @@ To have a web page that draws an animated hexagon like the one from PES.
 * The max value for any of the vertex weights is 100
 * The higher the weight, the more far away from the center the vertex will be.
 
+## The math (i.e: the formula)
+To calculate the vertex coordinate, we need to apply two formulas (one for each coordinate). Assuming that we want to calculate the vertex "V" in the 1st quadrant (where *x* and *y* will be always positive):
 
-## If I have to draw the initial pes-xagon in a 100x100 x-y axis, where would be the vertices at?
-For a (x,y) coordenate, each vertex would be at (don't worry, I did the math):
+* For Vx ==> Stat value * sin(30°)
+* For Vy ==> Stat value * cos(30°)
+
+## Default pes-xagon sizes
+For a **50** stats value in all the six vertices, these are the coordinates of each vertex:
+* V1: (0, -50) 
+* V2: (43.30, -25) 
+* V3: (43.30, 25) 
+* V4: (0, 50) 
+* V5: (-43.30, 25) 
+* V6: (-43.30 -25)
+
+## Max pes-xagon size
+For a **100** stats value in all the six vertices, these are the coordinates of each vertex:
+* V1: (0 -100)
+* V2: (86.60, -50)
+* V3: (86.60, 50)
+* V4: (0, 100)
+* V5: (-86.60, 50)
+* V6: (-86.60, -50)
 
 * V1: (0, -50) 
 * V2: (43.30, -25) 
@@ -55,9 +79,10 @@ For a (x,y) coordenate, each vertex would be at (don't worry, I did the math):
 - [x] Define the rules around the pes-xagon
 - [x] Study which technology will fit better
 - [x] Reach the 1st goal: _Have an hexagon drawn in a web page_
-- [ ]  Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
+- [x]  Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
 
 ## SUB-TODO's
 - [x] Understand how SVG polygon works (specially the points)
 - [ ] See how to animate one of the points. If it's too hard, then try a different approach.
+- [ ] Check what's the difference (and pros/cons) between `polygon` and `path`
 
