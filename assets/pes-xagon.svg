@@ -1,6 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200" width="300" height="300">
     <!-- axis -->
-    <!-- <line stroke="white" x1="-50" y1="0" x2="50" y2="0"/>
-    <line stroke="white" y1="-50" x1="0" y2="50" x2="0"/> -->
-    <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" stroke="coral" stroke-width="2"/>
+    <line stroke="grey" x1="-100" y1="0" x2="100" y2="0"/>
+    <line stroke="grey" y1="-100" x1="0" y2="100" x2="0"/>
+    <!-- center -->
+    <circle r="3" cx="0" cy="0" fill="blue"/>
+
+    <!-- to-be-animated polygon -->
+    <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="transparent" stroke="coral" stroke-width="1.5">
+        <animate 
+            attributeName="points"
+            fill="freeze"
+            dur="3s"
+            restart="always"
+            repeatCount="10"
+            to="0 -90, 64.95 -37.5, 43.30 25, 0 50, -43.30 25, -43.30 -25"
+        />
+    </polygon>
+    <!-- Max-size polygon -->
+    <polygon points="0 -100, 86.60 -50, 86.60 50, 0 100, -86.60 50, -86.60 -50" fill="transparent" stroke="red" stroke-width="1.5">
+    </polygon>
 </svg>
