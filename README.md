@@ -82,10 +82,15 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 ### SUB-TODO's
 - [x] Understand how SVG polygon works (specially the points)
 - [x] See how to animate one of the points. If it's too hard, then try a different approach.
-- [ ] Add some love to the structure (CSS for section, article, divs?)
-- [ ] Start thinking in JS (functions, constants, ways of setting points, calculating vertex positions, etc.)
+- [x] Start thinking in JS (functions, constants, ways of setting points, calculating vertex positions, etc.)
+- [ ] See how to use `animate` and `from-to` attributes from JS. (checking https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement and https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+- [ ] Set initial values for 3rd attempt vertices (right now, it's not setting the `points` in the polygon without a click :/)
+- [ ] See why the svg at the 3rd attempt is upside down (in terms of the vertex orders, I mean...)
+
 
 ### Optionals
+- [ ] Add some love to the structure (CSS for section, article, divs?)
+- [ ] Put min-max values to the form inputs (between 0 and 100) for the 3rd attempt form
 - [ ] Check what's the difference (and pros/cons) between `polygon` and `path`
 
 ## Resources
