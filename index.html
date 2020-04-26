@@ -10,13 +10,13 @@
 <body>
     <main>
         <h1>The PES-xagon</h1>
-        <section id="1st-test">
-            <h2>The first attempt: an animated pes-xagon</h2>
+        <section id="1st-attempt">
+            <a href="#1st-attempt" class="title">The first attempt: an animated pes-xagon</a>
             <img src="assets/pes-xagon.svg" width="300" height="300" />
         </section>
-        <section id="2nd-test">
-            <h2>2nd attempt: on click, run an animation</h2>
-            <svg id="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+        <section id="2nd-attempt">
+            <a href="#2nd-attempt" class="title">2nd attempt: on click, run an animation</a>
+            <svg class="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
                 <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="black" stroke="coral"
                     stroke-width="1.5">
                     <animate attributeName="points" begin="go.click" dur="1s" fill="freeze"
@@ -34,6 +34,55 @@
                 </p>
             </div>
         </section>
+        <section id="3rd-attempt">
+            <a href="#3rd-attempt" class="title">3rd attempt: Starting w/JS</a>
+            <div class="explanation">
+                <p>The all idea of this is to have something like the following:</p>
+                <code>
+                const vertexInitialValues = [55, 69, 80, 91, 60, 73]; <br/>
+                const pesxagon = drawPesXagon(vertexInitialValues); <br/>
+                // after some point in time
+                const newVertexValues = = [75, 59, 70, 91, 50, 93]; <br/>
+                pes-xagon.updateVertexValues(newVertexValues); <br/>
+                // see how the svg animates
+            </code>
+                <p>In order to do that, I need to be able to send the points to the svg.</p>
+            </div>
+            <div class="js-attempt">
+                <form class="vertex-form" onsubmit="onSubmitVertexValue();event.preventDefault();">
+                    <div class="row">
+                        <label for="vertex-1">vertex-1</label>
+                        <input name="vertex-1" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-2">vertex-2</label>
+                        <input name="vertex-2" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-3">vertex-3</label>
+                        <input name="vertex-3" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-4">vertex-4</label>
+                        <input name="vertex-4" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-5">vertex-5</label>
+                        <input name="vertex-5" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-6">vertex-6</label>
+                        <input name="vertex-6" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <button type="submit">Set vertex values</button>
+                </form>
+                <svg class="pes-xagon" id="js-pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+                    <polygon points="12 23,43 43" fill="black" stroke="green" stroke-width="1.5">
+                    </polygon>
+                </svg>
+
+            </div>
+        </section>
     </main>
     <style>
         main {
@@ -49,7 +98,7 @@
             background-color: green;
         }
 
-        #pes-xagon {
+        .pes-xagon {
             width: 30rem;
             height: 30rem;
             background-color: black;
@@ -58,7 +107,26 @@
         .explanation {
             padding: 1rem;
         }
-    </style>
-</body>
 
+        .vertex-form .row {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+    <script>
+        const pesxagon = document.getElementById('js-pes-xagon');
+
+        function getVertexCoordinates(vertices) {
+            return '0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25';
+        }
+
+        function onSubmitVertexValue() {
+            let innerPolygon = pesxagon.getElementsByTagName('polygon');
+            let form = document.getElementsByClassName('vertex-form').item(0);
+            const vertexValues = [...form.elements].map((element) => element.value);
+            const points = getVertexCoordinates(vertexValues);
+            innerPolygon.item(0).setAttribute('points', points);
+        }
+    </script>
+</body>
 </html>
