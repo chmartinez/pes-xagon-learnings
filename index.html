@@ -10,11 +10,11 @@
 <body>
     <main>
         <h1>The PES-xagon</h1>
-        <section id="1st-attempt">
+        <article id="1st-attempt">
             <a href="#1st-attempt" class="title">The first attempt: an animated pes-xagon</a>
             <img src="assets/pes-xagon.svg" width="300" height="300" />
-        </section>
-        <section id="2nd-attempt">
+        </article>
+        <article id="2nd-attempt">
             <a href="#2nd-attempt" class="title">2nd attempt: on click, run an animation</a>
             <svg class="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
                 <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="black" stroke="coral"
@@ -33,8 +33,8 @@
                     The other downside is that it only allows id's, so having multiple triggers could be a problem
                 </p>
             </div>
-        </section>
-        <section id="3rd-attempt">
+        </article>
+        <article id="3rd-attempt">
             <a href="#3rd-attempt" class="title">3rd attempt: Starting w/JS</a>
             <div class="explanation">
                 <p>The all idea of this is to have something like the following:</p>
@@ -82,15 +82,28 @@
                 </svg>
 
             </div>
-        </section>
+            <section class="pros-and-cons">
+                <h3>Pros</h3>
+                <ul>
+                    <li>Animation is smooth</li>
+                    <li>Clean notation</li>
+                </ul>
+                <h3>Cons</h3>
+                <ul>
+                    <li>No JS API to access inner `animate` elements</li>
+                    <li>SMIL's lack of support in browsers</li>
+                </ul>
+            </section>
+        </article>
     </main>
     <style>
         main {
             background-color: gray;
         }
 
-        section {
+        article {
             margin-bottom: 1rem;
+            padding: 0 1rem;
             border-bottom: solid 1px white;
         }
 

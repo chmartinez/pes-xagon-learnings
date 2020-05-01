@@ -83,7 +83,8 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 - [x] Understand how SVG polygon works (specially the points)
 - [x] See how to animate one of the points. If it's too hard, then try a different approach.
 - [x] Start thinking in JS (functions, constants, ways of setting points, calculating vertex positions, etc.)
-- [ ] See how to use `animate` and `from-to` attributes from JS. (checking https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement and https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+- [x] See how to use `animate` and `from-to` attributes from JS. (checking https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement and https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+- [ ] Find & apply an alternative to SMIL `animate` element
 - [ ] Set initial values for 3rd attempt vertices (right now, it's not setting the `points` in the polygon without a click :/)
 - [ ] See why the svg at the 3rd attempt is upside down (in terms of the vertex orders, I mean...)
 
