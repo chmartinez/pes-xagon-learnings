@@ -18,10 +18,10 @@ To have a web page that draws an animated hexagon like the one from PES.
 
 ## Objectives
 * ~~Have an hexagon drawn in a web page~~
-* Animation to one of the vertices (the figure must change its shape)
-* Add a way to start the animation when selecting a vertex
-* Let the figure to animate more than one vertex at a time
-* Add a way to configure "weights" to each vertex and make the animation depend on that "weight"
+* ~~Animation to one of the vertices (the figure must change its shape)~~
+* ~~Add a way to start the animation when selecting a vertex~~
+* ~~Let the figure to animate more than one vertex at a time~~
+* ~~Add a way to configure "weights" to each vertex and make the animation depend on that "weight"~~
 * Do it mobile-first (the figure and its configuration)
 * Publish the side
 
@@ -76,7 +76,8 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 - [x]  Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
 - [x] Reach the 3rd goal: _Add a way to start the animation when selecting a vertex (or clicking in a button or smth)_
 - [x] Reach the 4th goal: _Let the figure to animate more than one vertex at a time_
-- [ ] Reach the 5th goal: _Add a way to configure "weights" to each vertex and make the animation depend on that "weight"_
+- [x] Reach the 5th goal: _Add a way to configure "weights" to each vertex and make the animation depend on that "weight"_
+- [ ] Do it mobile-first (the figure and its configuration)
 
 
 ### SUB-TODO's
@@ -86,7 +87,8 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 - [x] See how to use `animate` and `from-to` attributes from JS. (checking https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement and https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
 - [x] Find & apply an alternative to SMIL `animate` element
 - [O] Set initial values for 3rd attempt vertices (right now, it's not setting the `points` in the polygon without a click :/)
-- [ ] See why the svg at the 3rd (and the 5th) attempt is upside down (in terms of the vertex orders, I mean...)
+- [x] See why the svg at the 3rd (and the 5th) attempt is upside down (in terms of the vertex orders, I mean...)
+- [ ] Try https://animejs.com/ to see if we have the same glitches or not
 
 
 ### Optionals
