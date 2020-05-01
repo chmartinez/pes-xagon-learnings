@@ -1,3 +1,10 @@
+const getInputFromParent = function (node) {
+    if (node) {
+        return node.querySelector('input') || {};
+    }
+    return {};
+}
+
 /**
  * 
  * @param {String} pathToScript The URL or the path to the script you want to load
@@ -44,8 +51,6 @@ function getVertexCoordinatesArray(vertices) {
     // return '0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25';
     let verticesValues = [...vertices];
     return verticesValues.reduce((coordinates, vertexValue, index) => {
-        console.log('index is', index);
-        
         const [vx, vy] = getVertexCoordinate(vertexValue, index);
         coordinates.push(`${vx} ${vy}`);
         return coordinates;

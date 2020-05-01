@@ -1,15 +1,21 @@
 (function () {
     const pesxagon = document.getElementById('js-pes-xagon');
     const innerPolygon = pesxagon.getElementsByTagName('polygon').item(0);
+    const submitFormBtn = document.querySelector('#js-attempt .vertex-form button');
 
-    function onSubmitVertexValue() {
-        let form = document.getElementsByClassName('vertex-form').item(0);
-        const formElements = [...form.elements];
-        // remove the submit button from the elements!
-        formElements.pop();
+    function setPolygonPoints (points) {
+        innerPolygon.setAttribute('points', points);
+    }
+
+    submitFormBtn.addEventListener('click', function (event) {
+        // get all the inputs in the parent
+        const rows = [...this.parentNode.children]
+        const formElements = rows
+            .map(row => getInputFromParent(row))
+            .filter(element => element.innerHTML != null);
         const vertexInputs = formElements;
         const vertexValues = vertexInputs.map((element) => element.value);
         const points = getVertexCoordinates(vertexValues);
-        innerPolygon.setAttribute('points', points);
-    }
+        setPolygonPoints(points);
+    });
 })();
