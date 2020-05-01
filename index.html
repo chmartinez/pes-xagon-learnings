@@ -11,11 +11,11 @@
     <main>
         <h1>The PES-xagon</h1>
         <article id="1st-attempt">
-            <a href="#1st-attempt" class="title">The first attempt: an animated pes-xagon</a>
+            <h2><a href="#1st-attempt">The first attempt: an animated pes-xagon</a></h2>
             <img src="assets/pes-xagon.svg" width="300" height="300" />
         </article>
         <article id="2nd-attempt">
-            <a href="#2nd-attempt" class="title">2nd attempt: on click, run an animation</a>
+            <h2><a href="#2nd-attempt">2nd attempt: on click, run an animation</a></h2>
             <svg class="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
                 <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="black" stroke="coral"
                     stroke-width="1.5">
@@ -35,7 +35,7 @@
             </div>
         </article>
         <article id="3rd-attempt">
-            <a href="#3rd-attempt" class="title">3rd attempt: Starting w/JS</a>
+            <h2><a href="#3rd-attempt">3rd attempt: Starting w/JS</a></h2>
             <div class="explanation">
                 <p>The all idea of this is to have something like the following:</p>
                 <code>
@@ -95,9 +95,9 @@
             </section>
         </article>
         <article id="4th-attempt">
-            <a href="#4th-attempt" class="title">4th attempt: Using a morphing library: GSAP</a>
+            <h2><a href="#4th-attempt">4th attempt: Using a morphing library: GSAP</a></h2>
             <div class="explanation">
-                <p>According to <a href="https://css-tricks.com/svg-shape-morphing-works/" target="_blank">this
+                <p>According to <h2><a href="https://css-tricks.com/svg-shape-morphing-works/" target="_blank">this</h2>
                         resource</a>, this library is better than doing SMIL (because its browser support) and CSS
                     animations (because the processing and because you can't animate all the SVG properties with CSS).
                 </p>
@@ -117,10 +117,29 @@
             </section>
         </article>
         <article id="5th-attempt">
-            <a href="#5th-attempt" class="title">5th attempt: Snap.svg</a>
-            <div class="explanation"></div>
-            <section></section>
-            <section class="pros-and-cons"></section>
+            <h2><a href="#5th-attempt">5th attempt: Snap.svg</a></h2>
+            <div class="explanation">
+                <p>Snap.svg is a JS lib from Adobe that does the work</p>
+            </div>
+            <section>
+                <svg class="pes-xagon" id="snap-pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+                    <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25"
+                        fill="black" stroke="red" stroke-width="1.5">
+                    </polygon>
+                </svg>
+            </section>
+            <section class="pros-and-cons">
+                <h3>Pros</h3>
+                <ul>
+                    <li>Does the job</li>
+                </ul>
+                <h3>Cons</h3>
+                <ul>
+                    <li>At 1st glance, looks like an old product</li>
+                    <li>The documentation is not straightforward</li>
+                    <li>I think I saw some glitches when doing the animation</li>
+                </ul>
+            </section>
         </article>
         <article id='5th-attempt'>
     </main>
