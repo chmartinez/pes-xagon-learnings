@@ -48,7 +48,7 @@
             </code>
                 <p>In order to do that, I need to be able to send the points to the svg.</p>
             </div>
-            <div class="js-attempt">
+            <section class="js-attempt">
                 <form class="vertex-form" onsubmit="onSubmitVertexValue();event.preventDefault();">
                     <div class="row">
                         <label for="vertex-1">vertex-1</label>
@@ -80,8 +80,7 @@
                     <polygon points="" fill="black" stroke="green" stroke-width="1.5">
                     </polygon>
                 </svg>
-
-            </div>
+            </section>
             <section class="pros-and-cons">
                 <h3>Pros</h3>
                 <ul>
@@ -94,6 +93,21 @@
                     <li>SMIL's lack of support in browsers</li>
                 </ul>
             </section>
+        </article>
+        <article id="4th-attempt">
+            <a href="#4th-attempt" class="title">4th attempt: Using a morphing library: GSAP</a>
+            <div class="explanation">
+                <p>According to <a href="https://css-tricks.com/svg-shape-morphing-works/" target="_blank">this
+                        resource</a>, this library is better than doing SMIL (because its browser support) and CSS
+                    animations (because the processing and because you can't animate all the SVG properties with CSS).
+                </p>
+            </div>
+                <section class="gsap-attempt">
+                    <svg class="pes-xagon" id="gsap-pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+                        <polygon points="0 -50, 43.30 -25, 43.30 25, 0 50, -43.30 25, -43.30 -25" fill="black" stroke="yellow" stroke-width="1.5">
+                        </polygon>
+                    </svg>
+                </section>
         </article>
     </main>
     <style>
@@ -128,6 +142,7 @@
     </style>
     <script src="./js/helper.js"></script>
     <script src="./js/3rd-attempt.js"></script>
+    <script src="./js/4th-attempt.js"></script>
 </body>
 
 </html>
