@@ -1,3 +1,27 @@
+/**
+ * 
+ * @param {String} pathToScript The URL or the path to the script you want to load
+ * @param {String} id An id
+ * @param {Function} callback Callback function
+ */
+const loadDynamicScript = (pathToScript, id, callback) => {
+    const existingScript = document.getElementById(id);
+
+    if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = pathToScript;
+        script.id = id;
+        document.body.appendChild(script);
+
+        script.onload = () => {
+            if (callback) callback();
+        };
+    }
+
+    if (existingScript && callback) callback();
+};
+
+
 // This is the math needed for the regular hexagon that we have.
 // Might be different in case you want to change the number of polygon points supported
 const HEXAGON_SIZES_NUMBER = 6;
