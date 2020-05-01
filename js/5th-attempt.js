@@ -1,9 +1,24 @@
 (function () {
     const testPoints = [0, -90, 64.95, -37.5, 43.30, 25, 0, 50, -43.30, 25, -43.30, -25];
+    const fiftyPointsStart = [0, 50, 43.30, 25, 43.30, -25, 0, -50, -43.30, -25, -43.30, 25];
+    const DEFAULT_POINTS = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    const createPesxagon = (svgId, startingPoints = DEFAULT_POINTS) => {
+        const paper = Snap(svgId);
+        const pesxagon = paper.polygon(startingPoints).attr({
+            fill: "black",
+            stroke: "red",
+            strokeWidth: 1.5
+        });
+        return pesxagon;
+    };
+
     loadDynamicScript('./js/libs/snap.svg-min.js', 'snapSvg', function () {
-        const whitePesxagon = Snap('#white-pes-xagon');
-        let whitePolygon = whitePesxagon.select('polygon');
-        whitePolygon.animate({ fill: 'white', points: testPoints }, 2000);
+        const whitePesxagon = createPesxagon('#white-pes-xagon', fiftyPointsStart);
+        whitePesxagon.animate({ fill: 'white', points: testPoints }, 2000);
+
+        const yellowPesxagon = createPesxagon('#yellow-pes-xagon');
+        yellowPesxagon.animate({ fill: 'yellow', points: fiftyPointsStart }, 1000);
 
         const submitFormBtn = document.querySelector('#snap-svg-attempt-form button');
 
@@ -16,9 +31,7 @@
             const vertexInputs = formElements;
             const vertexValues = vertexInputs.map((element) => element.value);
             const points = getVertexCoordinates(vertexValues);
-            const whitePesxagon = Snap('#yellow-pes-xagon');
-            let whitePolygon = whitePesxagon.select('polygon');
-            whitePolygon.animate({ fill: 'white', points: points }, 2000);
+            yellowPesxagon.animate({ fill: 'yellow', points: points }, 2000);
         });
     });
 })();
