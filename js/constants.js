@@ -1,0 +1,3 @@
+const NINETY_SEVENTY_FIVE_POINTS = '0 50, 43.30 25, 64.95 -37.5, 0 -90, -43.30 -25, -43.30 25';
+const FIFTY_POINTS = '0 50, 43.30 25, 43.30 -25, 0 -50, -43.30 -25, -43.30 25';
+const DEFAULT_POINTS = '0 0, 0 0, 0 0, 0 0, 0 0, 0 0';
