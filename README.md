@@ -22,6 +22,7 @@ To have a web page that draws an animated hexagon like the one from PES.
 * ~~Add a way to start the animation when selecting a vertex~~
 * ~~Let the figure to animate more than one vertex at a time~~
 * ~~Add a way to configure "weights" to each vertex and make the animation depend on that "weight"~~
+* Create a JS plugin/module out of this
 * Do it mobile-first (the figure and its configuration)
 * Publish the side
 
@@ -73,10 +74,11 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 - [x] Define the rules around the pes-xagon
 - [x] Study which technology will fit better
 - [x] Reach the 1st goal: _Have an hexagon drawn in a web page_
-- [x]  Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
+- [x] Reach the 2nd goal: _Animation to one of the vertices (the figure must change its shape)_
 - [x] Reach the 3rd goal: _Add a way to start the animation when selecting a vertex (or clicking in a button or smth)_
 - [x] Reach the 4th goal: _Let the figure to animate more than one vertex at a time_
 - [x] Reach the 5th goal: _Add a way to configure "weights" to each vertex and make the animation depend on that "weight"_
+- [ ] Create a JS plugin/module out of this
 - [ ] Do it mobile-first (the figure and its configuration)
 
 
@@ -86,13 +88,15 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 - [x] Start thinking in JS (functions, constants, ways of setting points, calculating vertex positions, etc.)
 - [x] See how to use `animate` and `from-to` attributes from JS. (checking https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimationElement and https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
 - [x] Find & apply an alternative to SMIL `animate` element
-- [O] Set initial values for 3rd attempt vertices (right now, it's not setting the `points` in the polygon without a click :/)
 - [x] See why the svg at the 3rd (and the 5th) attempt is upside down (in terms of the vertex orders, I mean...)
-- [ ] Try https://animejs.com/ to see if we have the same glitches or not
+- [x] Try https://animejs.com/ to see if we have the same glitches or not
+- [ ] Read "how to create a JS Module" blogs and shit ("Module Intro" and "Create & Publish a JS Module")
+- [ ] Reactify it
 
 
 ### Optionals
-- [ ] Add some love to the structure (CSS for section, article, divs?)
+- [O] Set initial values for 3rd attempt vertices (right now, it's not setting the `points` in the polygon without a click :/)
+- [x] Add some love to the structure (CSS for section, article, divs?)
 - [ ] Put min-max values to the form inputs (between 0 and 100) for the 3rd attempt form
 - [ ] Check what's the difference (and pros/cons) between `polygon` and `path`
 
@@ -104,3 +108,5 @@ For a **100** stats value in all the six vertices, these are the coordinates of 
 * [How SVG morphing works (with SMIL)](https://css-tricks.com/svg-shape-morphing-works/)
 * [How to animate svg path with CSS](https://css-tricks.com/animate-svg-path-changes-in-css/)
 * [Animate polygons with JS](https://www.creativebloq.com/how-to/create-and-animate-svg-polygons)
+* [JS Module intro](https://javascript.info/modules-intro)
+* [Create & publish a JS Module](https://hackernoon.com/wefwfewfe-hg7h324w)
