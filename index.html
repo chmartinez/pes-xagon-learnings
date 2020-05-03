@@ -98,7 +98,7 @@
             <h2><a href="#4th-attempt">4th attempt: Using a morphing library: GSAP</a></h2>
             <div class="explanation">
                 <p>According to <a href="https://css-tricks.com/svg-shape-morphing-works/" target="_blank">this
-                    resource</a>, this library is better than doing SMIL (because its browser support) and CSS
+                        resource</a>, this library is better than doing SMIL (because its browser support) and CSS
                     animations (because the processing and because you can't animate all the SVG properties with CSS).
                 </p>
             </div>
@@ -180,14 +180,49 @@
                 <p>I will also keep refactoring the code so that testing libs gets easier</p>
             </div>
             <section>
+                <svg class="pes-xagon" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200">
+                    <polygon id="anime-pes-xagon" points="0 50, 43.30 25, 43.30 -25, 0 -50, -43.30 -25, -43.30 25"
+                        fill="black" stroke="purple" stroke-width="1.5"></polygon>
+                </svg>
+                <div>
+                    <button id='anime-test-start'>Click</button>
+                </div>
+            </section>
+            <section>
+                <h3>Doing it with a form like the other attempts</h3>
+                <form id="anime-svg-attempt-form" class="vertex-form" onsubmit="event.preventDefault()">
+                    <div class="row">
+                        <label for="vertex-1">vertex-1</label>
+                        <input name="vertex-1" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-2">vertex-2</label>
+                        <input name="vertex-2" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-3">vertex-3</label>
+                        <input name="vertex-3" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-4">vertex-4</label>
+                        <input name="vertex-4" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-5">vertex-5</label>
+                        <input name="vertex-5" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <div class="row">
+                        <label for="vertex-6">vertex-6</label>
+                        <input name="vertex-6" type="number" required aria-required="true" step="0.01" value="50">
+                    </div>
+                    <button type="submit">Set vertex values</button>
+                </form>
                 <svg class="pes-xagon" xmlns="http://www.w3.org/2000/svg"
                     viewBox="-100 -100 200 200">
-                    <polygon id="anime-pes-xagon" points="0 50, 43.30 25, 43.30 -25, 0 -50, -43.30 -25, -43.30 25" fill="black" stroke="purple" stroke-width="1.5"></polygon>
+                    <polygon id="anime-yellow-pes-xagon" points="0 50, 43.30 25, 43.30 -25, 0 -50, -43.30 -25, -43.30 25"
+                        fill="black" stroke="purple" stroke-width="1.5"></polygon>
                 </svg>
             </section>
-            <div>
-                <button id='pepe'>Click</button>
-            </div>
             <section class="pros-and-cons"></section>
         </article>
     </main>

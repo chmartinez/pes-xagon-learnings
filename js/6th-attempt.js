@@ -11,6 +11,32 @@
             autoplay: false,
         });
 
-        document.getElementById('pepe').onclick = pesxagon.play;
+        document.getElementById('anime-test-start').onclick = pesxagon.play;
+
+
+        const submitFormBtn = document.querySelector('#anime-svg-attempt-form button');
+
+        submitFormBtn.addEventListener('click', function (event) {
+            // get all the inputs in the parent
+            const rows = [...this.parentNode.children]
+            const formElements = rows
+                .map(row => getInputFromParent(row))
+                .filter(element => element.innerHTML != null);
+            const vertexInputs = formElements;
+            const vertexValues = vertexInputs.map((element) => element.value);
+            const points = getVertexCoordinates(vertexValues);
+
+            const animePesxagon = anime({
+                targets: '#anime-yellow-pes-xagon',
+                duration: 2000,
+                points: [
+                    { value: points },
+                ],
+                fill: '#FFFF00',
+                easing:'easeOutQuad',
+                autoplay: false,
+            });
+            animePesxagon.play();
+        });
     });
 })();
