@@ -1,5 +1,5 @@
-# pes-xagon
-Show the hexagon from PES 
+# pes-xagon-learnings
+Learnings & attempts to pull out the hexagon from PES 
 
 Remember this?
 
@@ -22,9 +22,9 @@ To have a web page that draws an animated hexagon like the one from PES.
 * ~~Add a way to start the animation when selecting a vertex~~
 * ~~Let the figure to animate more than one vertex at a time~~
 * ~~Add a way to configure "weights" to each vertex and make the animation depend on that "weight"~~
-* Create a JS plugin/module out of this
+* Create a JS plugin/module out of this --> there will be a new repo with this stuff!
 * Do it mobile-first (the figure and its configuration)
-* Publish the side
+* Publish the side & the module!
 
 
 ## The rules around the PES-xagon
